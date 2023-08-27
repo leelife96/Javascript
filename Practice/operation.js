@@ -25,3 +25,6 @@ console.log('Max' - 'ax');
 let username = 'Max';
 console.log(username.length);
 console.log(username.toUpperCase());
+
+let hobbies = ['Sport', 'Cooking'];
+console.log(hobbies.length);
