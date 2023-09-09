@@ -1,12 +1,21 @@
-// document.body.children[1].children[0].href = 'https://google.com';
+let paragraphElement = document.querySelector('p');
 
-let anchorElement = document.getElementById('external-link');
-anchorElement.href = 'https://google.com';
+function changeParagraphText () {
+paragraphElement.textContent = 'Clicked';
+console.log('Paragraph clicked!')
+}
 
-anchorElement = document.querySelector('#external-id'); // a { color : red; }
-anchorElement.href = 'https://academind.com';
+paragraphElement.addEventListener('click', changeParagraphText);
 
-let newAnchorElement = document.createElement('a');
+let inputElement = document.querySelector('input');
 
-let fistParagraph = document.querySelector('p');
-fistParagraph.append(newAnchorElement);
+
+function retrieveUserInput(event) {
+    // let enteredText = inputElement.value;
+    let enteredText = event.target.value;
+    // let enteredText = event.data;
+    console.log(enteredText);
+    // console.log(event);
+}
+
+inputElement.addEventListener('input',retrieveUserInput)
